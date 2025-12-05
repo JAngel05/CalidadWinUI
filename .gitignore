@@ -1,0 +1,33 @@
+## --- Visual Studio Core ---
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## --- Compilación (Build) ---
+[Bb]in/
+[Oo]bj/
+*.lock.json
+
+## --- NuGet Packages ---
+# Es mejor restaurar los paquetes que subirlos
+*.nupkg
+packages/
+!packages/build/
+
+## --- WinUI / Windows App SDK Específico ---
+# Archivos de empaquetado y publicación
+AppPackages/
+BundleArtifacts/
+Package.StoreAssociation.xml
+_pkginfo.txt
+*.appx
+*.msix
+*.msixbundle
+*.appxbundle
+
+## --- Archivos temporales de XAML ---
+# A veces el diseñador XAML genera temporales
+*.g.cs
+*.g.i.cs

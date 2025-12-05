@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Calidad (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Calidad (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
