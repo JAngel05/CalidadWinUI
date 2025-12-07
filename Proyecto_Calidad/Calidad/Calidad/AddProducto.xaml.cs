@@ -7,7 +7,6 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,19 +21,17 @@ namespace Calidad
     /// <summary>
     /// An empty window that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainWindow : Window
+    public sealed partial class AddProducto : Window
     {
-        public MainWindow()
+        public AddProducto()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
-
-        public static ObservableCollection<Producto> Productos = new ObservableCollection<Producto>();
-        private void Dashbtn_Click(object sender, RoutedEventArgs e)
+        private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
-            Dashboard ventana = new Dashboard();
-            ventana.Activate();
         }
-
+        private void btnRegresar_Click(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }
