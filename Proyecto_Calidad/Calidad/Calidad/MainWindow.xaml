@@ -9,7 +9,52 @@
     mc:Ignorable="d"
     Title="Calidad">
 
-    <StackPanel Orientation="Horizontal" Spacing="12" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="Dashbtn" Click="Dashbtn_Click">Dashboard</Button>
-    </StackPanel>
+    <Grid VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!--Mensaje bienvenida-->
+            <RowDefinition Height="Auto"/>
+            <!--Mensaje Inicio de sesion-->
+            <RowDefinition Height="Auto"/>
+            <!--User-->
+            <RowDefinition Height="Auto"/>
+            <!--Espacio en blanco-->
+            <RowDefinition Height="Auto"/>
+            <!--Contraseña-->
+            <RowDefinition Height="Auto"/>
+            <!--Mensaje de error-->
+            <RowDefinition Height="Auto"/>
+            <!--Boton mostrar contraseña-->
+            <RowDefinition Height="Auto"/>
+            <!--Boton de inciar sesion-->
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Bienvenido" FontSize="24" HorizontalAlignment="Center" Margin="0,10"/>
+        <TextBlock Grid.Row="1" Text="Inicio de sesión" FontSize="16" HorizontalAlignment="Center" Margin="0,10"/>
+
+        <!-- User -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+            <TextBlock Text="Usuario:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <TextBox x:Name="UsernameTextBox" Width="200"/>
+        </StackPanel>
+
+        <!--Contraseña-->
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+            <TextBlock Text="Contraseña:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <PasswordBox x:Name="passworBoxWithRevealmode" Width="200"/>
+        </StackPanel>
+        <!--Mensaje de error-->
+        <TextBlock Grid.Row="5" x:Name="ErrorMessageTextBlock" Text="" Foreground="Red" HorizontalAlignment="Center" Margin="0,10"/>
+        <!--Boton mostrar contraseña-->
+        <CheckBox Grid.Row="6" Name="revealModeCheckBox" Content="Mostrar contraseña" 
+                      IsChecked="False" Margin="0,10,0,0" HorizontalAlignment="Center"
+                      Checked="RevealModeCheckbox_Changed" Unchecked="RevealModeCheckbox_Changed"/>
+        <!--Boton de inciar sesion-->
+        <StackPanel Grid.Row ="8" Orientation="Horizontal" Spacing="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="ButtonLogin" Style="{StaticResource AccentButtonStyle}" Click="LoginButton_Click">Iniciar sesión</Button>
+        </StackPanel>
+    </Grid>
 </Window>
+
+

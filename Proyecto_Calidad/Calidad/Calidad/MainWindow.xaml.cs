@@ -30,11 +30,36 @@ namespace Calidad
         }
 
         public static ObservableCollection<Producto> Productos = new ObservableCollection<Producto>();
-        private void Dashbtn_Click(object sender, RoutedEventArgs e)
+        public static readonly ObservableCollection<Users> users = new ObservableCollection<Users>();
+
+        private void RevealModeCheckbox_Changed(object sender, RoutedEventArgs e)
         {
-            Dashboard ventana = new Dashboard();
-            ventana.Activate();
+            if (revealModeCheckBox.IsChecked == true)
+            {
+                passworBoxWithRevealmode.PasswordRevealMode = PasswordRevealMode.Visible;
+            }
+            else
+            {
+                passworBoxWithRevealmode.PasswordRevealMode = PasswordRevealMode.Hidden;
+            }
         }
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            string username = UsernameTextBox.Text;
+            string password = passworBoxWithRevealmode.Password;
+            if (username == "1001" && password == "admin123")
+            {
+                Dashboard ventana = new Dashboard();
+                ventana.Activate();
+                this.Close();
+            }
+            else
+            {
+                ErrorMessageTextBlock.Text = "Usuario o contraseña incorrecto.";
+                ErrorMessageTextBlock.Foreground = new SolidColorBrush(Microsoft.UI.Colors.Red);
+            }
+        }
+
 
     }
 }

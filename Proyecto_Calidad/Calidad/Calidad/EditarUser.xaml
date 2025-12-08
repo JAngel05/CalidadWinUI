@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="Calidad.EditarUser"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calidad"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="EditarUser">
+    <Grid Padding="30" Background="Black">
+        <StackPanel Spacing="20" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+            <TextBlock Text="Agregar Usuario" FontSize="28" FontWeight="Bold" HorizontalAlignment="Center" Margin="100,0,0,10"/>
+
+            <Grid RowSpacing="18">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="No Empleado:" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold"/>
+                <TextBox x:Name="txtnoEmpleado" Grid.Row="0" Grid.Column="1" Width="350" HorizontalAlignment="Center"/>
+
+                <TextBlock Text="Nombre:" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold"/>
+                <TextBox x:Name="txtNombre" Grid.Row="1" Grid.Column="1" Width="350" HorizontalAlignment="Center" />
+
+                <TextBlock Text="Apellido Paterno:" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold"/>
+                <TextBox x:Name="txtApellidoP" Grid.Row="2" Grid.Column="1" Width="350" HorizontalAlignment="Center"/>
+
+                <TextBlock Text="Apellido Materno:" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold"/>
+                <TextBox x:Name="txtApellidoM" Grid.Row="3" Grid.Column="1" Width="350" HorizontalAlignment="Center"/>
+
+                <TextBlock Grid.Row="4" Name="txtContraseña" Text="Contraseña:" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold" />
+                <PasswordBox x:Name="passworBoxWithRevealmode" Grid.Row="4" Grid.Column="1"/>
+
+                <TextBlock Text="Rol:" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold"/>
+                <RadioButtons Name="RbRol" Grid.Row="5" Grid.Column="1"  MaxColumns="2">
+                    <x:String>Usuario</x:String>
+                    <x:String>Administrador</x:String>
+                </RadioButtons>
+
+                <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal" Spacing="250" HorizontalAlignment="Center">
+                    <Button Content="Agregar" Click="btnEditar_Click" Background="#4CAF50" Foreground="White" CornerRadius="5" Padding="20,8"/>
+                    <Button Content="Regresar" Click="btnRegresar_Click" Background="Red" Foreground="White" CornerRadius="5" Padding="15,8"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

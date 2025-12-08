@@ -105,6 +105,22 @@ namespace Calidad
                 ventana.Activate();
             }
         }
+        private void UsuariosBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Usuarios ventana = new Usuarios();
+            ventana.Activate();
+            this.Close();
+        }
+        private void ProductosBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Dashboard ventana = new Dashboard();
+            ventana.Activate();
+            this.Close();
+        }
+        private void btnMenu_Click(object sender, RoutedEventArgs e)
+        {
+            splitView.IsPaneOpen = !splitView.IsPaneOpen;
+        }
     }
 }
 

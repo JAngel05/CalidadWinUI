@@ -15,7 +15,12 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="AddProducto.xaml" />
+    <None Remove="AgregarUser.xaml" />
+    <None Remove="EditarUser.xaml" />
     <None Remove="Eliminar.xaml" />
+    <None Remove="EliminarUser.xaml" />
+    <None Remove="Principal.xaml" />
+    <None Remove="Usuarios.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,6 +48,31 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.7175" />
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.251106002" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="EliminarUser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="EditarUser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AgregarUser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Usuarios.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Principal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Eliminar.xaml">
