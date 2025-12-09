@@ -20,16 +20,26 @@
                        Foreground="Gray" HorizontalAlignment="Center" Margin="0,0,0,15"/>
 
             <Border Background="Black" BorderBrush="#FFCDD2" BorderThickness="2" CornerRadius="8" Padding="15">
-                <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto, Auto" RowSpacing="8">
+                <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" RowSpacing="8">
 
-                    <TextBlock Text="Producto:" FontWeight="Bold" Grid.Row="0" Margin="0,0,10,0"/>
-                    <TextBlock x:Name="lblNombre" Text="..." Grid.Row="0" Grid.Column="1"/>
+                    <TextBlock Text="ID:" FontWeight="Bold" Grid.Row="0" Margin="0,0,10,0"/>
+                    <TextBlock x:Name="lblID" Text="..." Grid.Row="0" Grid.Column="1"/> 
+                    
+                    <TextBlock Text="Producto:" FontWeight="Bold" Grid.Row="1" Margin="0,0,10,0"/>
+                    <TextBlock x:Name="lblNombre" Text="..." Grid.Row="1" Grid.Column="1"/>
 
-                    <TextBlock Text="Marca:" FontWeight="Bold" Grid.Row="1" Margin="0,0,10,0"/>
-                    <TextBlock x:Name="lblMarca" Text="..." Grid.Row="1" Grid.Column="1"/>
+                    <TextBlock Text="Categoria:" FontWeight="Bold" Grid.Row="2" Margin="0,0,10,0"/>
+                    <TextBlock x:Name="lblCategoria" Text="..." Grid.Row="2" Grid.Column="1"/>
 
-                    <TextBlock Text="Precio:" FontWeight="Bold" Grid.Row="2" Margin="0,0,10,0"/>
-                    <TextBlock x:Name="lblPrecio" Text="..." Grid.Row="2" Grid.Column="1" Foreground="DarkGreen"/>
+                    <TextBlock Text="Marca:" FontWeight="Bold" Grid.Row="3" Margin="0,0,10,0"/>
+                    <TextBlock x:Name="lblMarca" Text="..." Grid.Row="3" Grid.Column="1"/>
+
+                    <TextBlock Text="Precio:" FontWeight="Bold" Grid.Row="4" Margin="0,0,10,0"/>
+                    <TextBlock x:Name="lblPrecio" Text="..." Grid.Row="4" Grid.Column="1"/>
+
+                    <TextBlock Text="Stock:" FontWeight="Bold" Grid.Row="5" Margin="0,0,10,0"/>
+                    <TextBlock x:Name="lblStock" Text="..." Grid.Row="5" Grid.Column="1"/>
+
                 </Grid>
             </Border>
 

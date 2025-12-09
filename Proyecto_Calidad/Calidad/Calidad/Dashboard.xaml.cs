@@ -31,12 +31,12 @@ namespace Calidad
             this.InitializeComponent();
             if (MainWindow.Productos.Count == 0)
             {
-                MainWindow.Productos.Add(new Producto { Nombre = "Laptop Gamer", Categoria = "Cómputo", Marca = "Dell", Precio = "15000", Stock = "5", Estado = "Disponible" });
-                MainWindow.Productos.Add(new Producto { Nombre = "Mouse RGB", Categoria = "Accesorios", Marca = "Razer", Precio = "500", Stock = "20", Estado = "Disponible" });
-                MainWindow.Productos.Add(new Producto { Nombre = "Monitor 24'' 75Hz", Categoria = "Monitores", Marca = "Samsung", Precio = "3200", Stock = "8", Estado = "Disponible" });
-                MainWindow.Productos.Add(new Producto { Nombre = "Teclado Mecánico", Categoria = "Accesorios", Marca = "HyperX", Precio = "1450", Stock = "15", Estado = "Disponible" });
-                MainWindow.Productos.Add(new Producto { Nombre = "Disco SSD 1TB", Categoria = "Almacenamiento", Marca = "Kingston", Precio = "950", Stock = "30", Estado = "Disponible" });
-                MainWindow.Productos.Add(new Producto { Nombre = "Impresora WiFi", Categoria = "Impresión", Marca = "HP", Precio = "4200", Stock = "0", Estado = "Agotado" });
+                MainWindow.Productos.Add(new Producto { ID = "0001", Nombre = "Laptop Gamer", Categoria = "Laptops", Marca = "Dell", Precio = "15000", Stock = "5", Estado = "Disponible" });
+                MainWindow.Productos.Add(new Producto { ID = "0002", Nombre = "Mouse RGB", Categoria = "Perifericos", Marca = "Razer", Precio = "500", Stock = "20", Estado = "Disponible" });
+                MainWindow.Productos.Add(new Producto { ID = "0003", Nombre = "Monitor 24'' 75Hz", Categoria = "Monitores", Marca = "Samsung", Precio = "3200", Stock = "8", Estado = "Disponible" });
+                MainWindow.Productos.Add(new Producto { ID = "0004", Nombre = "Teclado Mecánico", Categoria = "Perifericos", Marca = "HyperX", Precio = "1450", Stock = "15", Estado = "Disponible" });
+                MainWindow.Productos.Add(new Producto { ID = "0005", Nombre = "Disco SSD 1TB", Categoria = "Almacenamiento", Marca = "Kingston", Precio = "950", Stock = "30", Estado = "Disponible" });
+                MainWindow.Productos.Add(new Producto { ID = "0006", Nombre = "Impresora WiFi", Categoria = "Impresión", Marca = "HP", Precio = "4200", Stock = "0", Estado = "Agotado" });
             }
 
             ActualizarLista();

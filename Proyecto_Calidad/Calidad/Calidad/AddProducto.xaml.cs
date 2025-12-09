@@ -29,9 +29,24 @@ namespace Calidad
         }
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
+            string nombre = txtNombre.Text;
+            string categoria = txtCategoria.Text;
+            string marca = txtMarca.Text;
+            string precioText = txtPrecio.Text;
+            string stock = txtStock.Text;
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(categoria) || string.IsNullOrEmpty(marca)
+                || string.IsNullOrEmpty(precioText) || string.IsNullOrEmpty(stock))
+            {
+                ErrorMessageNombre.Text = "Por favor, complete este campo.";
+                ErrorMessageCategoria.Text = "Por favor, complete este campo.";
+                ErrorMessageMarca.Text = "Por favor, complete este campo.";
+                ErrorMessagePrecio.Text = "Por favor, complete este campo.";
+                ErrorMessageStock.Text = "Por favor, complete este campo.";
+            }
         }
         private void btnRegresar_Click(object sender, RoutedEventArgs e)
         {
+            this.Close();
         }
     }
 }

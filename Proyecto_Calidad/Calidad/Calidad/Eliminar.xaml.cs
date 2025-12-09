@@ -32,14 +32,18 @@ namespace Calidad
             var hWnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
             var windowId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hWnd);
             var appWindow = Microsoft.UI.Windowing.AppWindow.GetFromWindowId(windowId);
-            appWindow.Resize(new Windows.Graphics.SizeInt32 { Width = 600, Height = 650 });
+            appWindow.Resize(new Windows.Graphics.SizeInt32 { Width = 800, Height = 850 });
         }
         public void CargarDatos(Producto producto)
         {
             _productoBorrar = producto;
+            lblID.Text = producto.ID;
             lblNombre.Text = producto.Nombre;
+            lblCategoria.Text = producto.Categoria;
             lblMarca.Text = producto.Marca;
             lblPrecio.Text = "$" + producto.Precio;
+            lblStock.Text = producto.Stock;
+
         }
         private void Confirmar_Click(object sender, RoutedEventArgs e)
         {

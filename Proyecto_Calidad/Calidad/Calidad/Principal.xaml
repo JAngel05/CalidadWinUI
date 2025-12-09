@@ -23,8 +23,8 @@
                     </Grid.RowDefinitions>
 
                     <TextBlock  Text="Menú" HorizontalAlignment="Left" Name="Header" Margin="10,10,10,10" ></TextBlock>
-                    <Button Style="{StaticResource SubtleButtonStyle}" Grid.Row="1" Content="Usuarios" HorizontalAlignment="Left" Margin="10,10,10,10" Click="UsuariosBtn_Click"></Button>
-                    <Button Style="{StaticResource SubtleButtonStyle}" Grid.Row="2" Content="Productos" HorizontalAlignment="Left" Margin="10,10,10,10" Click="ProductosBtn_Click"></Button>
+                    <Button Style="{StaticResource SubtleButtonStyle}" Background="Transparent" BorderThickness="0" Grid.Row="1" Content="Usuarios" HorizontalAlignment="Left" Margin="10,10,10,10" Click="UsuariosBtn_Click"></Button>
+                    <Button Style="{StaticResource SubtleButtonStyle}" Background="Transparent" BorderThickness="0" Grid.Row="2" Content="Productos" HorizontalAlignment="Left" Margin="10,10,10,10" Click="ProductosBtn_Click"></Button>
                 </Grid>
             </SplitView.Pane>
         </SplitView>
